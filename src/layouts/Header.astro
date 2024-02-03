@@ -1,0 +1,78 @@
+<header>
+	<span
+		><a href="/" title="Tangent">
+			<svg
+				width="20.367394208"
+				height="20"
+				viewBox="0 0 41.2331 57.2646"
+				fill="currentColor"
+			>
+				<title>Tangent</title>
+				<path
+					d="m-8.54114 26.7561h14.4657v11.801h23.6563c1.849 0 3.11792-.36255 3.80677-1.08765.68884-.76135 1.03326-2.17529 1.03326-4.24182v-6.4715h14.4657v10.5502c0 6.92469-1.28705 11.9822-3.86115 15.1727-2.61035 3.19043-6.70716 4.78565-12.2904 4.78565l-41.2762-18.7075zm48.1827-6.30835c-13.4239 0-13.4239-20.4478 0-20.4478 13.5101 0 13.5101 20.4478 0 20.4478zm-36.1642 0c-13.4239 0-13.4239-20.4478 0-20.4478 13.5101 0 13.5101 20.4478 0 20.4478z"
+				></path>
+			</svg>
+		</a>
+		by
+		<a href="https://cetera.uk" title="Etcetera">
+			<svg viewBox="0 0 173.8 275.72" height="20" fill="currentColor">
+				<title>Etcetera</title>
+				<circle cx="37.13" cy="26.43" r="21.6"></circle>
+				<circle cx="34.62" cy="117.87" r="34.62"></circle>
+				<circle cx="119.78" cy="130.68" r="21.6"></circle>
+				<circle cx="127.16" cy="46.64" r="46.65"></circle>
+				<circle cx="102.68" cy="219.58" r="56.14"></circle>
+			</svg>
+		</a></span
+	><hr />
+	<a href="/skyrockets">Skyrockets</a>
+	<a href="/reviver">Reviver</a>
+	<hr />
+	<a href="/big-browser">Big Browser is Watching</a>
+</header>
+<style>
+	svg,
+	header,
+	a {
+		vertical-align: middle;
+	}
+	header {
+		font-family: "Inter Display", Inter, sans-serif;
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+	}
+	a {
+		padding: 1ch;
+		border-radius: 1ch;
+		display: inline-block;
+		transition: background-color 0.1s;
+		@media (min-width: 801px) {
+			hr + & {
+				padding-inline-start: 2ch;
+			}
+			&:has(+ hr),
+			span &:last-child {
+				padding-inline-end: 2ch;
+			}
+		}
+		&:hover,
+		&:focus-visible {
+			background-color: ButtonFace;
+		}
+	}
+	@media (max-width: 800px) {
+		header {
+			flex-direction: column;
+		}
+		hr {
+			width: 90%;
+		}
+	}
+	@media not (max-width: 800px) {
+		hr {
+			height: 16px;
+			margin-inline: 0;
+		}
+	}
+</style>

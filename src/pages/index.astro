@@ -1,0 +1,50 @@
+---
+import Layout from "../layouts/Layout.astro"
+import screenshot from "../tangent.png"
+import { Picture } from "astro:assets"
+---
+
+<Layout>
+	<h1 class="tagline">Go on tangents.</h1>
+	<Picture
+		src={screenshot}
+		alt="Tangent browser with sidebar open"
+		width={800}
+		densities={[0.5, 1, 1.5]}
+	/>
+	<p>
+		Tangent is an opinionated browser from Etcetera based on Firefox. Finally, a <em
+			>user</em
+		> agent.
+	</p>
+	<div>
+		<a href="/download">Download for Linux</a>
+	</div>
+</Layout>
+
+<style>
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	@font-face {
+		font-family: "Super Inter Display";
+		src: local("Inter Variable");
+		font-feature-settings: "cv13", "cv11";
+	}
+	.tagline {
+		font-size: xxx-large;
+		font-family: "Super Inter Display", "Inter Display", Inter, sans-serif;
+	}
+	a {
+		background: AccentColor;
+		color: Canvas;
+		padding: 8px;
+		border-radius: 8px;
+	}
+	div,
+	p,
+	.tagline {
+		text-align: center;
+	}
+</style>

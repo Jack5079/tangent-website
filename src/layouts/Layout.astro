@@ -1,0 +1,32 @@
+---
+import Header from "./Header.astro"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<title>Tangent</title>
+		<meta name="color-scheme" content="dark light" />
+	</head>
+	<body>
+		<Header />
+		<slot />
+	</body>
+</html>
+
+<style>
+	body {
+		max-width: 800px;
+		margin-inline: auto;
+		font-family:
+			"Inter Variable",
+			"Inter var",
+			Inter,
+			system-ui,
+			-apple-system,
+			BlinkMacSystemFont,
+			sans-serif;
+	}
+</style>
