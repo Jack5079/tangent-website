@@ -11,12 +11,21 @@ import Header from "./Header.astro"
 		<meta name="color-scheme" content="dark light" />
 	</head>
 	<body>
+		<mark>TANGENT HAS NOT YET STARTED DEVELOPMENT, EVERYTHING HERE IS FAKE</mark>
 		<Header />
 		<slot />
 	</body>
 </html>
 
 <style>
+	mark {
+		display: block;
+		position: sticky;
+		top: 0;
+		left: 0;
+		right: 0;
+		text-align: center;
+	}
 	body {
 		max-width: 800px;
 		margin-inline: auto;
