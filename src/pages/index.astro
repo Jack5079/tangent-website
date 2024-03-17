@@ -6,23 +6,32 @@ import { Picture } from "astro:assets"
 
 <Layout>
 	<h1 class="tagline">Go on tangents.</h1>
-	<Picture
-		src={screenshot}
-		alt="Tangent browser with sidebar open"
-		width={800}
-		densities={[0.5, 1, 1.5]}
-	/>
+	<div>
+		<code>nix profile install github:mollersuite/tangent</code>
+	</div>
+	<br>
 	<p>
-		Tangent is an opinionated browser from Etcetera based on Firefox. Finally, a <em
+		Tangent is an opinionated browser by <a href="https://cetera.uk">Etcetera</a>. Finally, a <em
 			>user</em
 		> agent.
 	</p>
-	<div>
-		<a href="/download">Download for Linux</a>
-	</div>
+	<Picture
+		src={screenshot}
+		alt="Tangent browser with sidebar open. The sidebar is a placeholder simply reading 'hi! :3'. The browser is open to vsynctester.com and there is visible glitching."
+		width={1200}
+		densities={[0.5, 1, 1.5]}
+	/>
 </Layout>
 
 <style>
+	code {
+		font-family: monospace, monospace;
+		background: Field;
+		color: FieldText;
+		border: solid 1px FieldBorder;
+		border-radius: 1ch;
+		padding: 1ch;
+	}
 	img {
 		max-width: 100%;
 		height: auto;
@@ -36,7 +45,7 @@ import { Picture } from "astro:assets"
 		font-size: xxx-large;
 		font-family: "Super Inter Display", "Inter Display", Inter, sans-serif;
 	}
-	a {
+	a.cta {
 		background: AccentColor;
 		color: Canvas;
 		padding: 8px;
