@@ -7,9 +7,21 @@ import { Picture } from "astro:assets"
 <Layout>
 	<h1 class="tagline">Go on tangents.</h1>
 	<div>
-		<code>nix run github:mollersuite/tangent</code>
+		<code
+			>nix run <a href="https://github.com/mollersuite/tangent">github:mollersuite/tangent</a
+			><button
+				onclick="navigator.clipboard.writeText('nix run github:mollersuite/tangent')"
+				title="Copy to clipboard"
+				><svg width="16" height="15" version="1.1" viewBox="0 0 91.875 139.219">
+					<title>Copy to clipboard</title>
+					<path
+						d="m-9.75001 0c-5.11194 0-9.20875 4.133-9.20875 9.2087l-.0725 83.6038c0 2.4653.978884 4.8218 2.71912 6.5621 1.74023 1.7402 4.09679 2.7191 6.56213 2.7191h18.5625v-55.6875c0-10.2601 8.30236-18.5625 18.5625-18.5625h46.4062v-18.5625c0-5.1119-4.16932-9.2812-9.28125-9.2812zm37.125 37.125c-5.11194 0-9.28125 4.1693-9.28125 9.2812v83.5313c0 5.1119 4.16931 9.2812 9.28125 9.2812h55.6875l27.8438-27.8437v-64.9688c0-5.1119-4.16932-9.2812-9.28125-9.2812z"
+						fill="currentColor"></path>
+				</svg>
+			</button></code
+		>
 	</div>
-	<br>
+	<br />
 	<p>
 		Tangent is an opinionated browser by <a href="https://cetera.uk">Etcetera</a>. Finally, a <em
 			>user</em
@@ -24,6 +36,12 @@ import { Picture } from "astro:assets"
 </Layout>
 
 <style>
+	svg {
+		vertical-align: middle;
+	}
+	button {
+		margin-left: 1ch;
+	}
 	code {
 		font-family: monospace, monospace;
 		background: Field;
