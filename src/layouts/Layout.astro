@@ -8,6 +8,7 @@ import Header from "./Header.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<title>Tangent</title>
+		{Astro.props.description && <meta name="description" content={Astro.props.description} />}
 		<meta name="color-scheme" content="dark light" />
 	</head>
 	<body>
@@ -24,6 +25,12 @@ import Header from "./Header.astro"
 		left: 0;
 		right: 0;
 		text-align: center;
+	}
+	@media (prefers-color-scheme: dark) {
+		body {
+			background-color: black;
+			color: #EEE;
+		}
 	}
 	body {
 		max-width: 1200px;

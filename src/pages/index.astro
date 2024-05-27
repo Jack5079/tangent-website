@@ -4,8 +4,11 @@ import screenshot from "../tangent.png"
 import { Picture } from "astro:assets"
 ---
 
-<Layout>
+<Layout description="Go on tangents. A *user* agent, by Etcetera.">
 	<h1 class="tagline">Go on tangents.</h1>
+	<p>
+		An <em>user</em> agent. Coming soon. By <a href="https://cetera.uk">Etcetera</a>.
+	</p>
 	<div>
 		<code
 			>nix run <a href="https://github.com/mollersuite/tangent">github:mollersuite/tangent</a
@@ -21,18 +24,17 @@ import { Picture } from "astro:assets"
 			</button></code
 		>
 	</div>
-	<br />
-	<p>
-		Tangent is an opinionated browser by <a href="https://cetera.uk">Etcetera</a>. Finally, a <em
-			>user</em
-		> agent.
-	</p>
-	<Picture
-		src={screenshot}
-		alt="Tangent browser with sidebar open. The sidebar is a placeholder simply reading 'hi! :3'. The browser is open to vsynctester.com and there is visible glitching."
-		width={1200}
-		densities={[0.5, 1, 1.5]}
-	/>
+	<!-- <figure>
+		<Picture
+			src={screenshot}
+			alt="Tangent browser with sidebar open"
+			width={1200}
+			densities={[0.5, 1, 1.5]}
+		/>
+		<figcaption style="text-align: center">
+			(This is not a screenshot of Tangent, but of a frankenstein browser I daily drive to get a similar experience. Tangent is not ready yet)
+		</figcaption>
+	</figure> -->
 </Layout>
 
 <style>
@@ -60,14 +62,20 @@ import { Picture } from "astro:assets"
 		font-feature-settings: "cv13", "cv11";
 	}
 	.tagline {
+		/* margin-block: 0; */
 		font-size: xxx-large;
 		font-family: "Super Inter Display", "Inter Display", Inter, sans-serif;
+		text-wrap: balance;
 	}
 	a.cta {
 		background: AccentColor;
 		color: Canvas;
 		padding: 8px;
 		border-radius: 8px;
+	}
+	p {
+		max-width: 800px;
+		margin-inline: auto;
 	}
 	div,
 	p,
