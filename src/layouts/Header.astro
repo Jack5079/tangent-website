@@ -1,3 +1,7 @@
+---
+import { siX } from "simple-icons"
+---
+
 <header>
 	<a href="/" title="Tangent">
 		<svg width="20.367394208" height="20" viewBox="0 0 41.2331 57.2646" fill="currentColor">
@@ -8,13 +12,16 @@
 		</svg>
 	</a>
 	<hr />
-	<a href="/skyrockets">Skyrockets</a>
-	<!-- <a href="/slop-stopper">Slop Stopper</a> -->
-	<!-- <hr />
-	<a href="/big-browser">Big Browser is Watching</a> -->
+	<a href="/saves">Saves</a>
+	<a href="/tweaks">Tweaks</a>
+	<div style="flex:1"></div>
+	<a
+		href="https://x.com/tangent_browser"
+		set:html={siX.svg.replace('xmlns="http://www.w3.org/2000/svg"', "height=20 fill=currentColor")}
+	/>
 </header>
 <style>
-	svg,
+	header :global(svg),
 	header,
 	a {
 		vertical-align: middle;

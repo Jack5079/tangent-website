@@ -1,0 +1,101 @@
+---
+import Layout from "../layouts/Layout.astro"
+---
+
+<Layout title="Tangent Saves" description="The world's fastest bookmark manager.">
+	<h1 class="tagline">0.5 taps.</h1>
+	<img alt="Saves open on a phone and computer" />
+	<p>Saves is Tangent's auto-organizing bookmark manager. Runs on your devices, not ours.</p>
+	<table>
+		<caption>Bookmark managers, compared</caption>
+		<thead>
+			<tr>
+				<th>Feature</th>
+				<th>Tangent</th>
+				<th>Traditional browsers</th>
+				<th>Screenshots</th>
+				<th>mymind</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td
+					><abbr title="Are your bookmarks hidden from the bookmark manager's developer?"
+						>Private</abbr
+					></td
+				>
+				<td>☑️</td>
+				<td>Firefox only</td>
+				<td>Desktop only</td>
+				<td>❌</td>
+			</tr>
+			<tr>
+				<td
+					><abbr title="What do you get when you download your data?">Export format</abbr
+					></td
+				>
+				<td>JSON-LD</td>
+				<td>bookmarks.html</td>
+				<td>PNG</td>
+				<td>Proprietary</td>
+			</tr>
+			<tr>
+				<td><abbr title="Add bookmarks with an API">Scriptable</abbr></td>
+				<td colspan="3">Desktop only</td>
+				<td>❌</td>
+			</tr>
+			<tr>
+				<td><abbr title="Filter bookmarks with boolean operators">Logical search</abbr></td>
+				<td>☑️</td>
+				<td>❌</td>
+				<td>❌</td>
+				<td>☑️</td>
+			</tr>
+			<tr>
+				<td><abbr title="Apps can't stop you from bookmarking">Unblockable</abbr></td>
+				<td>Desktop only</td>
+				<td>☑️</td>
+				<td>Desktop only</td>
+				<td>❌</td>
+			</tr>
+			<tr>
+				<td><abbr title="Single click to bookmark">Unobtrusive</abbr></td>
+				<td>☑️</td>
+				<td>Desktop only</td>
+				<td>☑️</td>
+				<td>Desktop only</td>
+			</tr>
+			<tr>
+				<td><abbr title="No account is required to use the service">Anonymous</abbr></td>
+				<td colspan="3">☑️</td>
+				<td>❌</td>
+			</tr>
+		</tbody>
+	</table>
+</Layout>
+
+<style>
+	td:not(:first-child) {
+		text-align: center;
+	}
+	img:not([src]) {
+		background: #222;
+		display: block;
+		padding: 2ch;
+		align-content: center;
+		text-align: center;
+		font-family: "Inter Display", Inter, sans-serif;
+		font-size: large;
+		font-style: italic;
+		color: GrayText;
+		aspect-ratio: 16 / 9;
+		&.feature {
+			aspect-ratio: 3 / 1;
+			background: linear-gradient(to bottom, transparent, #222 10%, #222 90%, transparent);
+		}
+	}
+	h2 {
+		text-align: center;
+		font-family: "Inter Display", Inter, sans-serif;
+	}
+</style>

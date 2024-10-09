@@ -6,51 +6,63 @@ import Layout from "../layouts/Layout.astro"
 
 <Layout description="Go on tangents. A *user* agent, by Etcetera.">
 	<h1 class="tagline">Go on tangents.</h1>
+	<a href="/download">Download Tangent for Linux</a> | <a href="/saves"
+		>Download Tangent Saves for Android</a
+	>
+	<img alt="Tangent open to Twitter.com" />
+	<hr />
+	<h2>The maximal user agent</h2>
+	<img
+		alt="Collage of various Tangent features: native adblocker, Tangent Saves, Unsuggestive Suggestions, and more"
+		class="feature"
+	/>
+	<p>The first page you open in Tangent won't be an extension store.</p>
 	<p>
-		An <em>user</em> agent. Coming soon. By <a href="https://cetera.uk">Etcetera</a>.
+		Our adblocker uses the same engine as uBlock Origin. Our bookmark system was originally
+		going to be <a href="/saves">an entirely separate project</a>. We keep trying to find a new
+		flagship feature.
 	</p>
-	<div>
-		<code
-			>nix run <a href="https://github.com/mollersuite/tangent">github:mollersuite/tangent</a
-			><button
-				onclick="navigator.clipboard.writeText('nix run github:mollersuite/tangent')"
-				title="Copy to clipboard"
-				><svg width="16" height="15" version="1.1" viewBox="0 0 91.875 139.219">
-					<title>Copy to clipboard</title>
-					<path
-						d="m-9.75001 0c-5.11194 0-9.20875 4.133-9.20875 9.2087l-.0725 83.6038c0 2.4653.978884 4.8218 2.71912 6.5621 1.74023 1.7402 4.09679 2.7191 6.56213 2.7191h18.5625v-55.6875c0-10.2601 8.30236-18.5625 18.5625-18.5625h46.4062v-18.5625c0-5.1119-4.16932-9.2812-9.28125-9.2812zm37.125 37.125c-5.11194 0-9.28125 4.1693-9.28125 9.2812v83.5313c0 5.1119 4.16931 9.2812 9.28125 9.2812h55.6875l27.8438-27.8437v-64.9688c0-5.1119-4.16932-9.2812-9.28125-9.2812z"
-						fill="currentColor"></path>
-				</svg>
-			</button></code
-		>
-	</div>
-	<!-- <figure>
-		<Picture
-			src={screenshot}
-			alt="Tangent browser with sidebar open"
-			width={1200}
-			densities={[0.5, 1, 1.5]}
-		/>
-		<figcaption style="text-align: center">
-			(This is not a screenshot of Tangent, but of a frankenstein browser I daily drive to get a similar experience. Tangent is not ready yet)
-		</figcaption>
-	</figure> -->
+	<p>
+		Our vast scope does not preclude getting your browser out of your way. Features don't have
+		popups; they appear in the places you expect.
+	</p>
+	<h2>Designed with care</h2>
+	<img alt="An address bar featuring a sparkling lock icon" class="feature" />
+	<p>
+		Tangent follows the <a href="https://developer.gnome.org/hig/"
+			>GNOME Human Interface Guidelines</a
+		>. UI surfaces do not feel uncanny. Your theme is respected. Welcome back to native.
+	</p>
+	<h2>Reinventing the right wheel</h2>
+	<img alt="Standard devtools open in Tangent" class="feature" />
+	<p>
+		We are designers first, developers second. Tangent's innovations are in the frontend, not
+		the backend. Tangent uses WebKit, not some custom engine with awful stablity.
+	</p>
 </Layout>
 
 <style>
+	img:not([src]) {
+		background: #222;
+		display: block;
+		padding: 2ch;
+		align-content: center;
+		text-align: center;
+		font-family: "Inter Display", Inter, sans-serif;
+		font-size: large;
+		font-style: italic;
+		color: GrayText;
+		aspect-ratio: 16 / 9;
+		&.feature {
+			aspect-ratio: 3 / 1;
+			background: linear-gradient(to bottom, transparent, #222 10%, #222 90%, transparent);
+		}
+	}
 	svg {
 		vertical-align: middle;
 	}
 	button {
 		margin-left: 1ch;
-	}
-	code {
-		font-family: monospace, monospace;
-		background: Field;
-		color: FieldText;
-		border: solid 1px FieldBorder;
-		border-radius: 1ch;
-		padding: 1ch;
 	}
 	img {
 		max-width: 100%;
@@ -66,20 +78,16 @@ import Layout from "../layouts/Layout.astro"
 		font-size: xxx-large;
 		font-family: "Super Inter Display", "Inter Display", Inter, sans-serif;
 		text-wrap: balance;
+		text-align: center;
+	}
+	h2 {
+		text-align: center;
+		font-family: "Inter Display", Inter, sans-serif;
 	}
 	a.cta {
 		background: AccentColor;
 		color: Canvas;
 		padding: 8px;
 		border-radius: 8px;
-	}
-	p {
-		max-width: 800px;
-		margin-inline: auto;
-	}
-	div,
-	p,
-	.tagline {
-		text-align: center;
 	}
 </style>
