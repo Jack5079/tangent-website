@@ -1,15 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro"
-// import screenshot from "../tangent.png"
-// import { Picture } from "astro:assets"
+import hero from "../hero.png?url"
+import webkit from "../webkit.png?url"
 ---
 
-<Layout description="Go on tangents. A *user* agent, by Etcetera.">
+<Layout description="Go on tangents. The maximalist user agent.">
 	<h1 class="tagline">Go on tangents.</h1>
 	<a href="/download">Download Tangent for Linux</a> | <a href="/saves"
 		>Download Tangent Saves for Android</a
 	>
-	<img alt="Tangent open to Twitter.com" />
+	<img src={hero} alt="Tangent open to Twitter.com" />
 	<hr />
 	<h2>The maximal user agent</h2>
 	<img
@@ -34,7 +34,7 @@ import Layout from "../layouts/Layout.astro"
 		>. UI surfaces do not feel uncanny. Your theme is respected. Welcome back to native.
 	</p>
 	<h2>Reinventing the right wheel</h2>
-	<img alt="Standard devtools open in Tangent" class="feature" />
+	<img src={webkit} alt="Standard devtools open in Tangent" class="feature" />
 	<p>
 		We are designers first, developers second. Tangent's innovations are in the frontend, not
 		the backend. Tangent uses WebKit, not some custom engine with awful stablity.
